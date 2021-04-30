@@ -1,0 +1,173 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.right_area{
+	margin-top: -1.5%;
+}
+body {
+	background-color: white;
+	font-family: 'Saira', Arial, Helvetica, sans-serif;
+}
+
+.buttons{
+	position: absolute;
+	margin-top: 490px;
+	font-size: xx-large;
+	left: 5%;
+}
+
+.table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+}
+
+.tables{
+	position: relative;
+	left: 22%;
+	margin-top: 2%;
+	font-size: larger;
+}
+
+table#alter tr.dif td {
+	background: rgb(240, 237, 237) ; /* Linhas com fundo cinza */
+}
+.content{
+	position: relative;
+	left: 22%;
+}
+
+.text-box{
+	font-size: large;
+}
+.hora{
+	position: absolute;
+	margin-top: 11%;
+	left: 69%;
+}
+.tipo{
+	position: absolute;
+	margin-top: 11%;
+	left: 75.2%;
+}
+.valor{
+	position: absolute;
+	margin-top: 11%;
+	left: 89.2%;
+}
+.nome{
+	position: absolute;
+	margin-top: 15%;
+	left: 69%;
+}
+.convenio{
+	position: absolute;
+	margin-top: 15%;
+	left: 89.3%;
+}
+.status{
+	position: absolute;
+	margin-top: 19%;
+	left: 69%;
+}
+.chegada{
+	position: absolute;
+	margin-top: 19%;
+	left: 79.5%;
+}
+.atendido{
+	position: absolute;
+	margin-top: 19%;
+	left: 88%;
+}
+.notas{
+	position: absolute;
+	margin-top: 23%;
+	left: 69%;
+}
+
+/* CALENDARIO*/
+
+.date-picker {
+	position: relative;
+	width: 100%;
+	max-width: 235px;
+	height: 28px;
+	background-color:#75ddba;
+	margin: 36px auto;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+	left: 375px;
+	cursor: pointer;
+	user-select: none;
+	margin-top:-425px;
+}
+
+.date-picker:hover {
+	background-color: #F3F3F3;
+}
+
+.date-picker .selected-date {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: #020202; 
+	font-size: 20px;
+}
+
+.date-picker .dates {
+	position: absolute;
+	top: 100%; /*tira a parte onde mostra a data*/
+	right: 0;
+	left: 0;
+	background-color: #FFF;
+}
+
+.date-picker .dates.active {
+	display: block;
+}
+
+.date-picker .dates .month {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #EEE;
+}
+
+.date-picker .dates .month .arrows {
+	width: 35px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #000000;
+	font-size: 20px;
+}
+
+.date-picker .dates .month .arrows:hover {
+	background-color: #F3F3F3;
+}
+
+.date-picker .dates .month .arrows:active {
+	background-color: #75ddba;
+}
+
+.date-picker .dates .days {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	height: 120px;
+}
+.date-picker .dates .days .day { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #313131;
+}
+.date-picker .dates .days .day.selected {
+	background-color: #75ddba;
+}    
+    
