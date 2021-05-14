@@ -1,6 +1,10 @@
+
+
 const Sequelize = require ("sequelize");
 const connection = require("./database");
 const bcrypt = require('bcryptjs')
+
+
 
 const Usuario = connection.define('user', {
     email:{
@@ -40,5 +44,17 @@ Usuario.findOrCreate({
         nome: "Secretária"
     }
 });
+
+Usuario.findOrCreate({
+    where: {id: 3},
+    defaults: {
+        email: "29d704b73c-ee302f@inbox.mailtrap.io",
+        senha: 12345,
+        nome: "userTest"
+    }
+});
+
+
+
 
 module.exports = Usuario;

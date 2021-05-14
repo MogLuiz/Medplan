@@ -3,70 +3,54 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Side Navigation Bar</title>
-	<link rel="stylesheet" href="/css/styles1.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/pagcadastro.css">
     <link href='https://fonts.googleapis.com/css?family=roboto' rel='stylesheet' type='text/css'>
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 
-<header>
-    <div class="right_area">
-        <a href= "/" class ="logout_btn">Logout</a>
-    </div>
-</header>
 <body>
 
-<div class="wrapper">
-    <div class="sidebar">
-        <h2>Sidebar</h2>
-        <ul>
-            <li><a href="#"><img src="/img/calendar 1.png"> <div class="agenda">   Agenda </div></a></li>
-            <li><a href="\pacientes"><img src="/img/patient 1.png"> <div class="pacientes">   Pacientes </div></a></li>
-            <li><a href="\novoPaciente"><img src="/img/medical 1.png"> <div class="novo_paciente">   + Paciente </div></a></li>
-            <li><a href="#"><img src="/img/Group.png"> <div class="dados">   Dados </div></a></li>
-        </ul>
+    <div class="engloba">
 
-    </div>
-    <div class="line">
-        <img src="/img/Line 1.png">
-    </div>
-    <div class="main_content">
-        <div class="header"></div>
-        <div class="logo">
-            <img src="/img/logo.png">
-        </div>
-        <div class="menu_select">
-            <div class="texto"> Localizar paciente por: </div>
-            <form action="">
-                <select class="select">
-                    <option disabled selected></option>
-                    <option value="1">opcao1</option>
-                    <option value="2">opcao2</option>
-                    <option value="3">opcao3</option>
-                    <option value="4">opcao4</option>
-                </select>
-            </form>
+        <%- include ('partials/menuLateral.ejs'); %>
 
-            <div class="pesquisar">
-                <form class="form" method="POST" action="">
-                    <input class="field" name="pesquisa" placeholder="Digite sua pesquisa">
-                    <input class="enviar" type="submit" value="Enviar">
-                </form>
+        <div class="wrapper">
+
+            <div class="main_content">
+                <div class="menu_select">
+                    <div class="texto"> Localizar paciente por: </div>
+                    <form action="">
+                        <select class="select">
+                            <option disabled selected></option>
+                            <option value="1">opcao1</option>
+                            <option value="2">opcao2</option>
+                            <option value="3">opcao3</option>
+                            <option value="4">opcao4</option>
+                        </select>
+                    </form>
+        
+                    <div class="pesquisar">
+                        <form class="form" method="POST" action="">
+                            <input class="field" name="pesquisa" placeholder="Digite sua pesquisa">
+                            <input class="enviar" type="submit" value="Enviar">
+                        </form>
+                    </div>
+                    <div class="resultado-pesquisa">
+                        <ul>
+                            <% pacientes.forEach(paciente => {%>
+                                <li>
+                                    <br>
+                                    <a class="opcao" href="/pacientes/perfil/<%= paciente.id %>"><%= paciente.nome %></a>
+                                    <br>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        <div class="container">
-            <ul>
-                <% pacientes.forEach(paciente => {%>
-                    <li>
-                        <br>
-                        <a class="opcao" href="/pacientes/perfil/<%= paciente.id %>"><%= paciente.nome %></a>
-                        <br>
-                    </li>
-                <% }); %>
-            </ul>
+
         </div>
-      
     </div>
-</div>
 
 </body>
 </html>

@@ -1,7 +1,7 @@
-const Sequelize = require('sequelize'); //importando módulo
+const Sequelize = require ('sequelize'); //importando módulo
 
 const connection = new Sequelize('tis3', 'root', '35117423', {
-    host: 'localhost',
+    host: 'localhost', 
     dialect: 'mysql'
 });
 

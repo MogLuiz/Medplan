@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/date.css">
+    <link rel="stylesheet" href="/css/pagcadastro.css">
+    <link href='https://fonts.googleapis.com/css?family=roboto' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <title>Tela de agendamento</title>
+</head>
+
+<body>
+
+    <div class="container engloba">
+
+        <%- include ('partials/menuLateral.ejs'); %>
+
+            <div class="wrapper">
+
+                <div class="content">
+                    <h1>Dados da consulta</h1>
+
+                </div>
+
+
+                <form class="text-box" method="POST" action="/salvarConsulta">
+                    <div class="hora2">
+                        <h4>Hora</h4><label class="imprime-label">
+                            <%=consulta.hora%>
+                        </label>
+                    </div>
+                    <div class="tipo2">
+                        <h4>Tipo de Compromisso</h4>
+                        <label class="imprime-label">
+                            <%=consulta.tipo%>
+                        </label>
+                    </div>
+                    <div class="nome2">
+                        <h4>Nome do Paciente</h4>
+                        <label class="imprime-label">
+                            <%=consulta.nome%>
+                        </label>
+                    </div>
+                    <div class="convenio2">
+                        <h4>Convênio</h4>
+                        <label class="imprime-label">
+                            <%=consulta.convenio%>
+                        </label>
+                    </div>
+                    <div class="valor2">
+                        <h4>Valor</h4>
+                        <label class="imprime-label">
+                            <%=consulta.valor%>
+                        </label>
+                    </div>
+                    <div class="status2">
+                        <h4>Status</h4>
+                        <label class="imprime-label">
+                            <%=consulta.status%>
+                        </label>
+                    </div>
+                    <div class="chegada2">
+                        <h4>Chegada</h4>
+                        <label class="imprime-label">
+                            <%=consulta.chegada%>
+                        </label>
+                    </div>
+                    <div class="atendido2">
+                        <h4>Atendido</h4>
+                        <label class="imprime-label">
+                            <%=consulta.atendido%>
+                        </label>
+                    </div>
+                    <div class="notas2">
+                        <h4>Notas</h4>
+                        <textarea class="imprime-label"><%=consulta.notas%></textarea>
+                    </div>
+
+                </form>
+
+                <a class="btn-consulta btn1" href="/agenda/consulta/edit/<%= consulta.id %>"><b>Editar</b></a>
+
+                <form method="POST" action="/agenda/consulta/delete" onsubmit="confirmarDelecao(event, this)">
+                    <input type="hidden" name="id" value="<%= consulta.id%>">
+                    <button class="btn-consulta btn2" type="submit"><b>Desmarcar</b></button>
+                </form>
+
+            </div>
+
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+<script>
+    function confirmarDelecao(event, form) {
+        event.preventDefault();
+
+        var decision = confirm("Você quer escluir esta consulta?");
+
+        if (decision) {
+            form.submit();
+        }
+    }
+</script>
+
+</html>

@@ -3,45 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Side Navigation Bar</title>
-	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/pagcadastro.css">
     <link href='https://fonts.googleapis.com/css?family=roboto' rel='stylesheet' type='text/css'>
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 
-<header>
-    <div class="right_area">
-        <a href= "/" class ="logout_btn">Logout</a>
-    </div>
-</header>
 <body>
 
-<div class="wrapper">
-    <div class="sidebar">
-        <h2>Sidebar</h2>
-        <ul>
-            <li><a href="#"><img src="/img/calendar 1.png"> <div class="agenda">   Agenda </div></a></li>
-            <li><a href="\pacientes"><img src="/img/patient 1.png"> <div class="pacientes">   Pacientes </div></a></li>
-            <li><a href="\novoPaciente"><img src="/img/medical 1.png"> <div class="novo_paciente">   + Paciente </div></a></li>
-            <li><a href="#"><img src="/img/Group.png"> <div class="dados">   Dados </div></a></li>
-        </ul>
+    <div class="engloba">
 
-    </div>
-    <div class="line">
-        <img src="/img/Line 1.png">
-    </div>
-    <div class="main_content">
-        <div class="header"></div>
-        <div class="logo">
-            <img src="/img/logo.png">
+        <%- include ('partials/menuLateral.ejs'); %>
+
+        <div class="content">
+
+            <div class="info">
+                <div>Seja bem-vindo <%= usuario.nome %></div>
+            </div>
+
+            <div class="conteudo container">
+                <div class="imagem_medico"> 
+                    <img src="/img/undraw_doctors_hwty 1.png">
+                  </div>
+            </div>
+
         </div>
-        <div class="info">
-          <div>Seja bem-vindo <%= usuario.nome %></div>
-      </div>
-      <div class="imagem_medico"> 
-        <img src="/img/undraw_doctors_hwty 1.png">
-      </div>
     </div>
-</div>
 
 </body>
 </html>

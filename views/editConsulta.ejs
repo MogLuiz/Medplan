@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/date.css">
+    <link rel="stylesheet" href="/css/pagcadastro.css">
+    <link href='https://fonts.googleapis.com/css?family=roboto' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <title>Tela de agendamento</title>
+</head>
+
+<body>
+
+    <div class="container engloba">
+
+        <%- include ('partials/menuLateral.ejs'); %>
+
+        <div class="wrapper">
+    
+            <div class="content">
+                <h1>Consulta</h1>
+            </div>    
+    
+            <form class="text-box" method="POST" action="/agenda/consulta/update">
+                <div class="hora2">
+                    <h4>Hora</h4>
+                    <select id="" class="form-control " name="hora">
+                        <option selected><%= consulta.hora %></option>
+                        <option> 8:30</option>
+                        <option> 9:10</option>
+                        <option> 9:50</option>
+                        <option> 10:30</option>
+                        <option> 11:10</option>
+                        <option> 11:50</option>
+                        <option> 13:30</option>
+                        <option> 14:10</option>
+                        <option> 14:50</option>
+                        <option> 15:30</option>
+                        <option> 16:10</option>
+                    </select>
+                </div>
+                <div class="tipo2">
+                    <h4>Tipo de Compromisso</h4>
+                    <input type="text" name="tipo" size="23" value="<%= consulta.tipo %>"/>
+                </div>
+                <div class="nome2">
+                    <h4>Nome do Paciente</h4>
+                    <input type="text" name="nome" size="30" value="<%= consulta.nome %>"/>
+                    <button type="submit">&#128269;</button>
+                </div>
+                <div class="convenio2">
+                    <h4>Convênio</h4>
+                    <select id="inputConvenio" class="form-control " name="convenio">
+                        <option selected><%= consulta.convenio %></option>
+                        <option> Cassi</option>
+                        <option> Particular</option>
+                        <option> Part desc.</option>
+                    </select>
+                </div>
+                <div class="valor2">
+                    <h4>Valor</h4>
+                    <input type="text" name="valor" size="9" value="<%= consulta.valor %>"/>
+                </div>
+                <div class="status2">
+                    <h4>Status</h4>
+                    <select id="inputStatus" class="form-control " name="status" >
+                        <option selected><%= consulta.status %></option>
+                        <option>Aguardando</option>
+                        <option>Atendido</option>
+                        <option>Nao Compareceu</option>
+                    </select>
+                </div>
+                <div class="chegada2">
+                    <h4>Chegada</h4>
+                    <input type="text" name="chegada" size="12" value="<%= consulta.chegada %>"/>
+                </div>
+                <div class="atendido2">
+                    <h4>Atendido</h4>
+                    <input type="text" name="atendido" size="12" value="<%= consulta.atendido %>"/>
+                </div>
+                <div class="notas2">
+                    <h4>Notas</h4>
+                    <textarea name="notas" cols="50" rows="2" value=""><%= consulta.notas%></textarea>
+                </div>
+
+                <input type="hidden" name="id" value="<%= consulta.id %>">
+                <button class="btn-save" type="submit"
+                        style="border-color:black;background-color: #75ddba; color: black; width:94px; height:37px;  border-radius: 30px;"><b>Salvar</b></button>
+
+                
+            </form>
+
+        </div>
+
+        
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
