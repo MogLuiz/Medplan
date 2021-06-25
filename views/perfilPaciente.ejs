@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/pagcadastro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/guideStyle.css">
     <title>Document</title>
 </head>
 
@@ -13,20 +14,23 @@
 
     <div class="engloba">
 
-        <%- include ('partials/menuLateral.ejs'); %>
+        <%- include ('partials/menuLateralDados.ejs'); %>
 
-        <div class="content">
+            <div class="form-paciente">
 
-            <div class="conteudo container">
+                <h3>Perfil de <%=paciente.nome%></h3>
+
                 <form class="cadastro" method="POST" action="/salvarPaciente">
                     <div class="row">
 
-                        <div class="col-md-10">
+                        <div class="col-md-12">
 
                             <div class="row">
                                 <div class="col-12">
                                     <label for="inputName">Nome</label>
-                                    <label class="form-control"><%=paciente.nome%></label>
+                                    <label class="form-control">
+                                        <%=paciente.nome%>
+                                    </label>
                                 </div>
                             </div>
 
@@ -35,15 +39,21 @@
 
                                 <div class="col-4 ">
                                     <label for="prontuario ">Prontuario</label>
-                                    <label class="form-control"><%=paciente.prontuario%></label>
+                                    <label class="form-control">
+                                        <%=paciente.prontuario%>
+                                    </label>
                                 </div>
                                 <div class="col-4">
-                                    <label for="DataCadastro ">Data de Cadastro</label>
-                                    <label class="form-control"><%=paciente.dataCadastro%></label>
+                                    <label for="DataCadastro ">Data de cadastro</label>
+                                    <label class="form-control">
+                                        <%=paciente.dataCadastro%>
+                                    </label>
                                 </div>
                                 <div class="col-4 ">
-                                    <label for="Nascimento ">Data de Nascimento</label>
-                                    <label class="form-control"><%=paciente.nascimento%></label>
+                                    <label for="Nascimento ">Data de nascimento</label>
+                                    <label class="form-control">
+                                        <%=paciente.nascimento%>
+                                    </label>
                                 </div>
 
                             </div>
@@ -51,17 +61,20 @@
                             <div class="form-row ">
                                 <div class="col ">
                                     <label for="inputState ">Convenio</label>
-                                    <label class="form-control"><%=paciente.convenio%></label>
+                                    <label class="form-control">
+                                        <%=paciente.convenio%>
+                                    </label>
                                 </div>
                                 <div class="col ">
                                     <label for="inputState ">Sexo</label>
-                                    <label class="form-control"><%=paciente.sexo%></label>
+                                    <label class="form-control">
+                                        <%=paciente.sexo%>
+                                    </label>
                                 </div>
 
                             </div>
 
                         </div>
-                        <div class="col-md-2 " style="background-color:white; border: 1px solid rgb(196, 194, 194); "></div>
 
                     </div>
 
@@ -69,16 +82,22 @@
 
 
                         <div class="col-4 ">
-                            <label for="inputState ">Estado Civil</label>
-                            <label class="form-control"><%=paciente.estadoCivil%></label>
+                            <label for="inputState ">Estado civil</label>
+                            <label class="form-control">
+                                <%=paciente.estadoCivil%>
+                            </label>
                         </div>
                         <div class="col-4">
                             <label for="inputState">Cor</label>
-                            <label class="form-control"><%=paciente.cor%></label>
+                            <label class="form-control">
+                                <%=paciente.cor%>
+                            </label>
                         </div>
                         <div class="col-4 ">
                             <label for="Naturalidade ">Naturalidade</label>
-                            <label class="form-control"><%=paciente.naturalidade%></label>
+                            <label class="form-control">
+                                <%=paciente.naturalidade%>
+                            </label>
                         </div>
 
                     </div>
@@ -88,12 +107,16 @@
 
                         <div class="col-6">
                             <label for="cpf ">CPF</label>
-                            <label class="form-control"><%=paciente.cpf%></label>
+                            <label class="form-control">
+                                <%=paciente.cpf%>
+                            </label>
                         </div>
-                        
+
                         <div class="col-6">
                             <label for="profissao">Profissao</label>
-                            <label class="form-control"><%=paciente.profissao%></label>
+                            <label class="form-control">
+                                <%=paciente.profissao%>
+                            </label>
                         </div>
 
                     </div>
@@ -101,7 +124,9 @@
                     <div class="row pt-1">
                         <div class="col-12">
                             <label for="email ">Email para envio de informacoes medicas</label>
-                            <label class="form-control"><%=paciente.email%></label>
+                            <label class="form-control">
+                                <%=paciente.email%>
+                            </label>
                         </div>
                     </div>
 
@@ -109,28 +134,36 @@
 
                         <div class="col-8 ">
                             <label for="Logradouro ">Logradouro</label>
-                            <label class="form-control"><%=paciente.logradouro%></label>
+                            <label class="form-control">
+                                <%=paciente.logradouro%>
+                            </label>
                         </div>
                         <div class="col-4">
                             <label for="Complemento ">Complemento</label>
-                            <label class="form-control"><%=paciente.complemento%></label>
+                            <label class="form-control">
+                                <%=paciente.complemento%>
+                            </label>
                         </div>
 
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="row">
                                 <div class="container">
                                     <div class="row ">
 
                                         <div class="col-6 ">
                                             <label for="Bairro ">Bairro</label>
-                                            <label class="form-control"><%=paciente.bairro%></label>
+                                            <label class="form-control">
+                                                <%=paciente.bairro%>
+                                            </label>
                                         </div>
                                         <div class="col-6">
                                             <label for="Cidade ">Cidade</label>
-                                            <label class="form-control"><%=paciente.cidade%></label>
+                                            <label class="form-control">
+                                                <%=paciente.cidade%>
+                                            </label>
                                         </div>
 
                                     </div>
@@ -142,15 +175,21 @@
 
                                         <div class="col-2 ">
                                             <label for="uf ">UF</label>
-                                            <label class="form-control"><%=paciente.uf%></label>
+                                            <label class="form-control">
+                                                <%=paciente.uf%>
+                                            </label>
                                         </div>
                                         <div class="col-5">
                                             <label for="Cep ">CEP</label>
-                                            <label class="form-control"><%=paciente.cep%></label>
+                                            <label class="form-control">
+                                                <%=paciente.cep%>
+                                            </label>
                                         </div>
                                         <div class="col-5">
                                             <label for="Telefone ">Telefone</label>
-                                            <label class="form-control"><%=paciente.telefone%></label>
+                                            <label class="form-control">
+                                                <%=paciente.telefone%>
+                                            </label>
                                         </div>
 
                                     </div>
@@ -164,38 +203,43 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </form>
 
-                <a href="/pacientes/perfil/edit/<%= paciente.id %>" class="btn btn-warning">Editar</a>
-                <form method="POST" action="/pacientes/delete" style="display: inline" onsubmit="confirmarDelecao(event, this)">
+                <a href="/pacientes/perfil/edit/<%= paciente.id %>" id="btnEditarPac" class="btn btn-success">Editar</a>
+                <form method="POST" action="/pacientes/delete" style="display: inline"
+                    onsubmit="confirmarDelecao(event, this)">
                     <input type="hidden" name="id" value="<%= paciente.id%>">
-                    <button class="btn btn-danger">Deletar</button>
+                    <button id="btnExcluirPac" class="btn btn-success">Excluir</button>
                 </form>
 
                 <br>
-                
+
             </div>
 
-        </div>
-
     </div>
-    
+
 
 </body>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js " integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF " crossorigin="anonymous "></script>
-<script src="/public/js/bootstrap.min.js "></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
+    crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js "
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN "
+    crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js "
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF "
+    crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
 <script>
-    function confirmarDelecao(event, form){
+    function confirmarDelecao(event, form) {
         event.preventDefault();
-        
-        var decision = confirm("Você quer deletar este paciente?");
 
-        if(decision){
+        var decision = confirm("Deseja deletar este paciente?");
+
+        if (decision) {
             form.submit();
         }
     }

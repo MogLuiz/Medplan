@@ -1,0 +1,29 @@
+<div class="main-header">
+    <a href= "/" class ="logout_btn">Logout</a>
+</div>
+
+<div class="aside">
+
+    <div class="menu">
+        <img class="logo" src="/img/logo.png" alt="">
+
+        <ul>
+            <a href="/home">Home</a>
+            <a href="/agenda">Agenda</a>
+            <a href="/pacientes">Pacientes</a>
+            <a href="/novoPaciente">Novo Paciente</a>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dados
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="/anamneses/<%= paciente.id %>">Anamneses</a></li>
+                  <li><a class="dropdown-item" href="/exames/<%= paciente.id %>">Exames</a></li>
+                  <li><a class="dropdown-item" href="/receitas/<%= paciente.id %>">Receitas</a></li>
+                </ul>
+              </div>
+        </ul>
+    </div>
+
+</div>

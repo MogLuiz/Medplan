@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/pagcadastro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/guideStyle.css">
     <title>Document</title>
 </head>
 
@@ -15,18 +16,20 @@
 
         <%- include ('partials/menuLateral.ejs'); %>
 
-        <div class="content">
+            <div class="form-paciente">
 
-            <div class="conteudo container">
+                <h3>Editar dados do paciente</h3>
+
                 <form class="cadastro" method="POST" action="/pacientes/update">
                     <div class="row">
 
-                        <div class="col-md-10">
+                        <div class="col-md-12">
 
                             <div class="row">
                                 <div class="col-12">
                                     <label for="inputName">Nome</label>
-                                    <input type="text " class="form-control" id="inputName " placeholder="" name="nome" value="<%=paciente.nome%>">
+                                    <input type="text " class="form-control" id="inputName " placeholder="" name="nome"
+                                        value="<%=paciente.nome%>">
                                 </div>
                             </div>
 
@@ -35,15 +38,18 @@
 
                                 <div class="col-4 ">
                                     <label for="prontuario ">Prontuario</label>
-                                    <input type="text" class="form-control" id="prontuario" placeholder="" name="prontuario" value="<%=paciente.prontuario%>">
+                                    <input type="text" class="form-control" id="prontuario" placeholder=""
+                                        name="prontuario" value="<%=paciente.prontuario%>">
                                 </div>
                                 <div class="col-4">
-                                    <label for="DataCadastro ">Data de Cadastro</label>
-                                    <input type="text" class="form-control" id="DataCadastro" placeholder="" name="dataCadastro" value="<%=paciente.dataCadastro%>">
+                                    <label for="DataCadastro ">Data de cadastro</label>
+                                    <input type="text" class="form-control" id="DataCadastro" placeholder=""
+                                        name="dataCadastro" value="<%=paciente.dataCadastro%>">
                                 </div>
                                 <div class="col-4 ">
-                                    <label for="Nascimento ">Data de Nascimento</label>
-                                    <input type="text" class="form-control" id="Nascimento" placeholder="" name="nascimento" value="<%=paciente.nascimento%>">
+                                    <label for="Nascimento ">Data de nascimento</label>
+                                    <input type="text" class="form-control" id="Nascimento" placeholder=""
+                                        name="nascimento" value="<%=paciente.nascimento%>">
                                 </div>
 
                             </div>
@@ -51,52 +57,59 @@
                             <div class="form-row ">
                                 <div class="col ">
                                     <label for="inputState ">Convenio</label>
-                                    <select id="inputState " class="form-control" name="convenio">
-                                    <option selected><%=paciente.convenio%></option>
-                                    <option>Vitalis</option>
-                                    <option>Unimed</option>
+                                    <select id="inputState " class="form-select" name="convenio">
+                                        <option selected>
+                                            <%=paciente.convenio%>
+                                        </option>
+                                        <option>Vitalis</option>
+                                        <option>Unimed</option>
                                     </select>
                                 </div>
                                 <div class="col ">
                                     <label for="inputState ">Sexo</label>
-                                    <select id="inputState " class="form-control " name="sexo">
-                                    <option selected><%=paciente.sexo%></option>
-                                    <option>Masculino</option>
-                                    <option>Feminino</option>
+                                    <select id="inputState " class="form-select" name="sexo">
+                                        <option selected>
+                                            <%=paciente.sexo%>
+                                        </option>
+                                        <option>Masculino</option>
+                                        <option>Feminino</option>
                                     </select>
                                 </div>
 
                             </div>
 
                         </div>
-                        <div class="col-md-2 " style="background-color:white; border: 1px solid black; "></div>
-
                     </div>
 
                     <div class="row pt-1">
 
 
                         <div class="col-4 ">
-                            <label for="inputState ">Estado Civil</label>
-                            <select id="inputState " class="form-control " name="estadoCivil">
-                            <option selected><%=paciente.estadoCivil%></option>
-                            <option>Casado</option>
-                            <option>Solteiro</option>
+                            <label for="inputState ">Estado civil</label>
+                            <select id="inputState " class="form-select" name="estadoCivil">
+                                <option selected>
+                                    <%=paciente.estadoCivil%>
+                                </option>
+                                <option>Casado</option>
+                                <option>Solteiro</option>
                             </select>
                         </div>
                         <div class="col-4">
                             <label for="inputState">Cor</label>
-                            <select id="inputState " class="form-control " name="cor">
-                            <option selected><%=paciente.cor%></option>
-                            <option>Branco</option>
-                            <option>Negro</option>
-                            <option>Pardo</option>
-                            <option>Amarelo</option>
+                            <select id="inputState " class="form-select" name="cor">
+                                <option selected>
+                                    <%=paciente.cor%>
+                                </option>
+                                <option>Branco</option>
+                                <option>Negro</option>
+                                <option>Pardo</option>
+                                <option>Amarelo</option>
                             </select>
                         </div>
                         <div class="col-4 ">
                             <label for="Naturalidade ">Naturalidade</label>
-                            <input type="text " class="form-control " id="Naturalidade" placeholder=" " name="naturalidade" value="<%=paciente.naturalidade%>">
+                            <input type="text " class="form-control " id="Naturalidade" placeholder=" "
+                                name="naturalidade" value="<%=paciente.naturalidade%>">
                         </div>
 
                     </div>
@@ -106,12 +119,14 @@
 
                         <div class="col-6">
                             <label for="cpf ">CPF</label>
-                            <input type="text " class="form-control " id="cpf" placeholder=" " name="cpf" value="<%=paciente.cpf%>">
+                            <input type="text " class="form-control " id="cpf" placeholder=" " name="cpf"
+                                value="<%=paciente.cpf%>">
                         </div>
-                        
+
                         <div class="col-6">
                             <label for="profissao">Profissao</label>
-                            <input type="text " class="form-control " id="profissao " placeholder=" " name="profissao" value="<%=paciente.profissao%>">
+                            <input type="text " class="form-control " id="profissao " placeholder=" " name="profissao"
+                                value="<%=paciente.profissao%>">
                         </div>
 
                     </div>
@@ -119,7 +134,8 @@
                     <div class="row pt-1">
                         <div class="col-12">
                             <label for="email ">Email para envio de informacoes medicas</label>
-                            <input type="text " class="form-control " id="email " placeholder="" name="email" value="<%=paciente.email%>">
+                            <input type="text " class="form-control " id="email " placeholder="" name="email"
+                                value="<%=paciente.email%>">
                         </div>
                     </div>
 
@@ -127,29 +143,33 @@
 
                         <div class="col-8 ">
                             <label for="Logradouro ">Logradouro</label>
-                            <input type="text " class="form-control " id="Logradouro " placeholder=" " name="logradouro" value="<%=paciente.logradouro%>">
+                            <input type="text " class="form-control " id="Logradouro " placeholder=" " name="logradouro"
+                                value="<%=paciente.logradouro%>">
                         </div>
                         <div class="col-4">
                             <label for="Complemento ">Complemento</label>
-                            <input type="text " class="form-control " id="Complemento " placeholder=" " name="complemento" value="<%=paciente.complemento%>">
+                            <input type="text " class="form-control " id="Complemento " placeholder=" "
+                                name="complemento" value="<%=paciente.complemento%>">
                         </div>
 
 
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="row">
                                 <div class="container">
                                     <div class="row ">
 
                                         <div class="col-6 ">
                                             <label for="Bairro ">Bairro</label>
-                                            <input type="text " class="form-control " id="Bairro " placeholder=" " name="bairro" value="<%=paciente.bairro%>">
+                                            <input type="text " class="form-control " id="Bairro " placeholder=" "
+                                                name="bairro" value="<%=paciente.bairro%>">
                                         </div>
                                         <div class="col-6">
                                             <label for="Cidade ">Cidade</label>
-                                            <input type="text " class="form-control " id="Cidade " placeholder=" " name="cidade" value="<%=paciente.cidade%>">
+                                            <input type="text " class="form-control " id="Cidade " placeholder=" "
+                                                name="cidade" value="<%=paciente.cidade%>">
                                         </div>
 
                                     </div>
@@ -162,15 +182,18 @@
 
                                         <div class="col-2 ">
                                             <label for="uf ">UF</label>
-                                            <input type="text " class="form-control " id="uf " placeholder=" " name="uf" value="<%=paciente.uf%>">
+                                            <input type="text " class="form-control " id="uf " placeholder=" " name="uf"
+                                                value="<%=paciente.uf%>">
                                         </div>
                                         <div class="col-5">
                                             <label for="Cep ">CEP</label>
-                                            <input type="text " class="form-control " id="Cep " placeholder=" " name="cep" value="<%=paciente.cep%>">
+                                            <input type="text " class="form-control " id="Cep " placeholder=" "
+                                                name="cep" value="<%=paciente.cep%>">
                                         </div>
                                         <div class="col-5">
                                             <label for="Telefone ">Telefone</label>
-                                            <input type="text " class="form-control " id="Telefone " placeholder=" " name="telefone" value="<%=paciente.telefone%>">
+                                            <input type="text " class="form-control " id="Telefone " placeholder=" "
+                                                name="telefone" value="<%=paciente.telefone%>">
                                         </div>
 
 
@@ -181,26 +204,32 @@
                         <div>
                             <div class="form-group class">
                                 <label for="exampleFormControlTextarea1 pt-2">Observacoes</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="observacoes"><%=paciente.observacoes%></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    name="observacoes"><%=paciente.observacoes%></textarea>
                             </div>
                         </div>
                     </div>
 
                     <input type="hidden" name="id" value="<%= paciente.id %>">
-                    <button type="submit"  class="btn btn-success float-right ">Atualizar</button>
+                    <button type="submit" class="btn btn-success float-right btnSalvarPac">Atualizar</button>
                 </form>
                 <br>
-                
+
             </div>
 
-        </div>
     </div>
 
 </body>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js " integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF " crossorigin="anonymous "></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
+    crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js "
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN "
+    crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js "
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF "
+    crossorigin="anonymous "></script>
 <script src="/public/js/bootstrap.min.js "></script>
 
 </html>
