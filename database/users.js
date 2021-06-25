@@ -1,10 +1,6 @@
-
-
 const Sequelize = require ("sequelize");
 const connection = require("./database");
 const bcrypt = require('bcryptjs')
-
-
 
 const Usuario = connection.define('user', {
     email:{
