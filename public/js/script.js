@@ -31,13 +31,13 @@ next_mth_element.addEventListener('click', goToNextMonth);
 prev_mth_element.addEventListener('click', goToPrevMonth);
 
 // FUNCTIONS
-function toggleDatePicker (e) {
+function toggleDatePicker(e) {
 	if (!checkEventPathForClass(e.path, 'dates')) {
 		dates_element.classList.toggle('active');
 	}
 }
 
-function goToNextMonth (e) {
+function goToNextMonth(e) {
 	month++;
 	if (month > 11) {
 		month = 0;
@@ -47,7 +47,7 @@ function goToNextMonth (e) {
 	populateDates();
 }
 
-function goToPrevMonth (e) {
+function goToPrevMonth(e) {
 	month--;
 	if (month < 0) {
 		month = 11;
@@ -57,7 +57,7 @@ function goToPrevMonth (e) {
 	populateDates();
 }
 
-function populateDates (e) {
+function populateDates(e) {
 	days_element.innerHTML = '';
 	let amount_days = 31;
 
@@ -82,6 +82,17 @@ function populateDates (e) {
 
 			selected_date_element.textContent = formatDate(selectedDate);
 			selected_date_element.dataset.value = selectedDate;
+			
+			//preenche campo BD com a data
+
+			var dataPreenchida = document.getElementById('inputData');
+			var value = "";
+
+			value = value + selected_date_element.textContent;
+
+			dataPreenchida.value = value;
+
+			//mostrar agenda daquela data
 
 			populateDates();
 		});
@@ -90,16 +101,16 @@ function populateDates (e) {
 	}
 }
 
-function checkEventPathForClass (path, selector) {
+function checkEventPathForClass(path, selector) {
 	for (let i = 0; i < path.length; i++) {
 		if (path[i].classList && path[i].classList.contains(selector)) {
 			return true;
 		}
 	}
-	
+
 	return false;
 }
-function formatDate (d) {
+function formatDate(d) {
 	let day = d.getDate();
 	if (day < 10) {
 		day = '0' + day;
@@ -112,5 +123,5 @@ function formatDate (d) {
 
 	let year = d.getFullYear();
 
-	return day + ' / ' + month + ' / ' + year;
+	return day + '/' + month + '/' + year;
 }

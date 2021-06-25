@@ -1,0 +1,654 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+/*Login*/
+
+.body-login{
+    background-color: #77E1BB;
+}
+.form-login{
+    width: 450px;
+    margin: auto;
+    padding-top: 60px;
+}
+.card{
+    box-shadow: 1px 1px 5 px white;
+    background-color: white;
+    padding: 50px;
+    border-radius: 5px;
+}
+.card-group{
+    margin-bottom: 10px;
+    margin-left: 30px;
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+}
+
+.card-group-f > button{
+    background-color: #77E1BB;
+    width: 75%;
+    border-radius: 30px;
+    margin-left: 30px;
+    font-size: x-large;
+    color: white;
+    border: none;
+}
+
+.card-top{
+    text-align: center;
+}
+
+.card-group > input{
+    border-radius: 3px;
+    outline: 0;
+    width: 80%;
+    height: 18px;
+    padding: 5px;
+    border: none;
+}
+
+.card-group > label{
+    width: 100%;
+    color: black;
+    display: block;
+}
+
+.card-group-f{
+    margin-bottom: 10px;
+    margin-left: 30px; 
+    cursor: pointer;
+}
+
+.card-group-f > button{
+    cursor: pointer;
+}
+
+/*Recuperar senha*/
+
+.box-senha{
+    margin-bottom: 50px;
+    margin: 140px;
+    box-shadow: 1px 1px 5 px white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 150px;
+    background: white;
+    padding: 30px;
+    max-width: 400px;
+}
+
+.form-signin{
+    width: 270px;
+    margin: auto;
+    padding-top: 10px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.btn-card{
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 10%;
+}
+
+/*css pagCadastro*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrapper{
+    margin-left: 600px;
+    width: 500px;
+}
+
+/* busca */
+.opcao{
+    margin: 10px;
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    left: 25px;
+    top: 210px;
+    font-size: 16px;
+    line-height: 56px;
+    color: #000000;
+    text-decoration: none;
+}
+  
+.texto{
+    position: relative;
+    bottom: 8px;
+}
+  
+.menu_select{
+    position: relative;
+    right: 560px;
+    top: 20px;
+}
+  
+.select{
+    padding: 16px 368px;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 4px;
+}
+  
+.submit{
+    position: relative;
+    font-family: Roboto;
+    padding: 2px 12px;
+    left: 20px;
+    bottom: -9px;
+    background-color: white;
+}
+  
+.submit:hover{
+    background-color: #75ddba;
+}
+  
+.resultado-pesquisa ul li{
+    position: relative;
+    bottom: 600px;
+    right: 390px;
+}
+  
+.form{
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+}
+  
+.field{
+    position: relative;
+    padding: 17px;
+    bottom: -40px;
+    margin-right: 174px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.pesquisar{
+    position: relative;
+    width: 900px;
+}
+
+.btn-enviar{
+    width: 100px;
+    height: 36px;
+}
+
+/* fim busca */
+  
+.logout_btn{
+    float: right;
+    margin-right: 50px;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #77E1BB;
+    border: solid;
+    border-radius: 20px;
+    border-color: #77E1BB;
+    padding: 10px;
+}
+
+.engloba {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 70px auto;
+    grid-template-areas: 'AS MH' 'AS CT';
+    height: 100vh;
+}
+
+.aside {
+    display: flex;
+    grid-area: AS;
+    border-right: 1px solid black;
+    min-height: 100%;
+}
+
+.aside .logo{
+    height: 130px;
+    margin-left: -18px;
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.dropdown-menu.show{
+    padding: 0px;
+    max-width: 150px;
+    min-width: 150px;
+}
+
+.aside .menu ul a {
+    color: black;
+    display: flex;
+    margin-top: 28px;
+    margin-left: -10px;
+    width: 150px;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.dropdown-item{
+    color: black;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    text-decoration: none !important;
+    border-style: none !important;
+}
+
+.aside .menu ul a:hover {
+    text-decoration: none;
+    border: 1px solid #77E1BB;
+    border-radius: 5px;
+}
+
+.main-header {
+    background-color: white;
+}
+
+.content {
+    padding-left: 15px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    grid-area: CT;
+}
+
+.content-home{
+    margin-left: 20px;
+}
+
+.info{
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.cadastro{
+    margin-left: -20px;
+    width: 1000px;
+}
+
+/*pacientes*/
+
+.form-paciente{
+    margin-left: 60px ;
+}
+
+.form-paciente h3{
+    margin-left: -20px;
+}
+
+/*date*/
+
+.btn-consulta{
+	font-size: 15px;
+	border: solid;
+	border-color:black;
+	background-color: #75ddba; 
+	color: black; 
+	width:94px; 
+	height:38px;  
+	border-radius: 30px;
+	position: fixed;
+	margin-top: 23%;
+	left: 20%;
+	padding: 8px;
+}
+
+.btn2{
+	left: 23% !important;
+    width: 120px;
+}
+.btn1{
+    left: 16.4% !important;
+	padding-left: 23px;
+}
+
+.table {
+	border-collapse: collapse;
+}
+
+.tables{
+	float: left;
+	margin-left: -550px;
+	margin-top: 2%;
+    width: 500px;
+}
+
+.content{
+	position: relative;
+	left: 22%;
+}
+
+.text-box{
+	font-size: large;
+}
+
+.DataConsulta{
+    position: absolute;
+    width: 500px;
+	margin-top: 2%;
+	left: 16.4%;
+}
+
+.hora{
+	position: absolute;
+	margin-top: 5%;
+	left: 16.4%;
+}
+.tipo{
+	position: absolute;
+	margin-top: 5%;
+	left: 23.6%;
+}
+.valor{
+	position: absolute;
+	margin-top: 5%;
+	left: 41.8%;
+}
+.nome{
+	position: absolute;
+	margin-top: 9.5%;
+	left: 16.4%;
+}
+.convenio{
+	position: absolute;
+	margin-top: 9.5%;
+	left: 40.7%;
+}
+.status{
+	position: absolute;
+	margin-top: 14%;
+	left: 16.4%;
+}
+.chegada{
+	position: absolute;
+	margin-top: 14%;
+	left: 30.3%;
+}
+.atendido{
+	position: absolute;
+	margin-top: 14%;
+	left: 40.5%;
+}
+.notas{
+	position: absolute;
+	margin-top: 18.5%;
+	left: 16.4%;
+}
+
+
+.btn-create{
+	position: fixed;
+	margin-top: 26%;
+	left: 16.4%;
+}
+.btn-novo{
+	position: fixed;
+	margin-top: 26%;
+	left: 22%;
+}
+.btn-save{
+	position: fixed;
+	margin-top: 27%;
+	left: 16.4%;
+}
+
+
+.hora2{
+	position: absolute;
+	margin-top: 5%;
+	left: 16.4%;
+}
+.tipo2{
+	position: absolute;
+	margin-top: 5%;
+	left: 22.6%;
+}
+.valor2{
+	position: absolute;
+	margin-top: 5%;
+	left: 36.4%;
+}
+.nome2{
+	position: absolute;
+	margin-top: 9%;
+	left: 16.4%;
+}
+.convenio2{
+	position: absolute;
+	margin-top: 9%;
+	left: 35.7%;
+}
+.status2{
+	position: absolute;
+	margin-top: 13%;
+	left: 16.4%;
+}
+.chegada2{
+	position: absolute;
+	margin-top: 13%;
+	left: 26.9%;
+}
+.atendido2{
+	position: absolute;
+	margin-top: 13%;
+	left: 35.4%;
+}
+.notas2{
+	position: absolute;
+	margin-top: 17%;
+	left: 16.4%;
+}
+
+.data3{
+	position: absolute;
+	margin-top: 1%;
+	left: 16.4%;
+}
+.hora3{
+	position: absolute;
+	margin-top: 6%;
+	left: 16.4%;
+}
+.tipo3{
+	position: absolute;
+	margin-top: 6%;
+	left: 23.6%;
+}
+.valor3{
+	position: absolute;
+	margin-top: 6%;
+	left: 41.6%;
+}
+.nome3{
+	position: absolute;
+	margin-top: 11%;
+	left: 16.4%;
+}
+.convenio3{
+	position: absolute;
+	margin-top: 11%;
+	left: 40.6%;
+}
+.status3{
+	position: absolute;
+	margin-top: 16%;
+	left: 16.4%;
+}
+.chegada3{
+	position: absolute;
+	margin-top: 16%;
+	left: 29.9%;
+}
+.atendido3{
+	position: absolute;
+	margin-top: 16%;
+	left: 40.4%;
+}
+.notas3{
+	position: absolute;
+	margin-top: 21%;
+	left: 16.4%;
+}
+
+
+/* CALENDARIO*/
+
+#calendar{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.fc-col-header-cell-cushion{
+    color: black;
+    text-decoration: none;
+}
+
+.fc-daygrid-day-number{
+    color: black;
+    text-decoration: none;
+}
+
+.fc-event-time{
+    color: black;
+    font-size: small;
+}
+
+.fc-event-title{
+    color: black;
+    font-size: small;
+}
+
+.titulo-agendamento{
+    margin-left: -550px;
+}
+
+.btn-NovaConsulta{
+    margin-left: 20px;
+    margin-bottom: -30px;
+}
+
+/*botão busca dos formulários*/
+
+.nome label{
+    position: fixed;
+}
+
+.campo-nome{
+    margin-top: 24px;
+    float: left;
+    min-width: 360px;
+}
+
+.btnBuscaNome{
+    margin-top: 29px;
+    margin-left: 10px;
+    float: right;
+}
+
+.campo-nome2{
+    float: left;
+    min-width: 360px;
+}
+
+.btnBuscaNome2{
+    margin-top: 5px;
+    margin-left: 10px;
+    float: right;
+}
+
+/*css anamneses*/
+.anamneses{
+    position: relative;
+    top: 40px;
+}
+
+.exames{
+    position: relative;
+    top: 40px;
+}
+
+.receitas{
+    position: relative;
+    top: 40px;
+}
+
+.btn-novoProntuario{
+    margin-top: 60px;
+}
+
+.btn-prontuario{
+    margin-top: 50px;
+}
+
+.btn-savePront{
+    margin-top: 50px;
+}
+
+.resizedTextbox{
+    position: relative;
+    top: 40px;
+    width: 830px; height: 350px
+
+}
+
+/*tabela busca*/
+.input-pesquisa{
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: 1000px;
+}
+
+.pesquisa2 h3{
+    margin-top: -20px;
+    margin-left: -570px;
+}
+
+.pesquisaPacientes{
+    position: absolute;
+    top: 160px;
+    left: 230px;
+}
+
+#nomePacBusc{
+    text-decoration: none;
+    color: #000000;
+}
+
+#btnEditarPac{
+    margin-left: -20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#btnExcluirPac{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.btnSalvarPac{
+    margin-top: 20px;
+    margin-bottom: 40px
+}
+
+#dataCriacao{
+    display: block;
+}
